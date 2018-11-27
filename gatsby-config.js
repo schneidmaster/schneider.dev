@@ -78,7 +78,6 @@ module.exports = {
                         date
                         layout
                         draft
-                        description
                       }
                     }
                   }

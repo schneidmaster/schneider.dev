@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Post from '../components/Post'
 import Sidebar from '../components/Sidebar'
@@ -9,7 +9,11 @@ class IndexRoute extends React.Component {
   render() {
     const items = []
     const { title, subtitle } = this.props.data.site.siteMetadata
-    const posts = this.props.data.allMarkdownRemark.edges
+    const {
+      group: posts,
+      index,
+      pageCount,
+    } = this.props.pageContext
     posts.forEach(post => {
       items.push(<Post data={post} key={post.node.fields.slug} />)
     })
@@ -23,7 +27,25 @@ class IndexRoute extends React.Component {
           </Helmet>
           <Sidebar {...this.props} />
           <div className="content">
-            <div className="content__inner">{items}</div>
+            <div className="content__inner">
+              {items}
+
+              <div className="content__links">
+                {
+                  index > 1 &&
+                  <Link to={`/${index === 2 ? '' : index - 1}`} rel="prev">
+                    ← Previous page
+                  </Link>
+                }
+
+                {
+                  index < pageCount &&
+                  <Link to={`/${index + 1}`} rel="next">
+                    Next page →
+                  </Link>
+                }
+              </div>
+            </div>
           </div>
         </div>
       </Layout>
@@ -51,26 +73,6 @@ export const pageQuery = graphql`
           twitter
           github
           linkedin
-        }
-      }
-    }
-    allMarkdownRemark(
-      limit: 1000
-      filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-            categorySlug
-          }
-          frontmatter {
-            title
-            date
-            category
-          }
         }
       }
     }

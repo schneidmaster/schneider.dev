@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const createPaginatedPages = require('gatsby-paginate')
 const slash = require('slash')
 
 exports.createPages = ({ graphql, actions }) => {
@@ -20,16 +21,20 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark(
           limit: 1000
           filter: { frontmatter: { draft: { ne: true } } }
+          sort: { fields: [frontmatter___date], order: DESC }
         ) {
           edges {
             node {
               excerpt
               fields {
                 slug
+                categorySlug
               }
               frontmatter {
-                tags
                 layout
+                title
+                date
+                tags
                 category
               }
             }
@@ -42,50 +47,63 @@ exports.createPages = ({ graphql, actions }) => {
         reject(result.errors)
       }
 
-      _.each(result.data.allMarkdownRemark.edges, edge => {
-        if (_.get(edge, 'node.frontmatter.layout') === 'page') {
-          createPage({
-            path: edge.node.fields.slug,
-            component: slash(pageTemplate),
-            context: { slug: edge.node.fields.slug },
-          })
-        } else if (_.get(edge, 'node.frontmatter.layout') === 'post') {
-          createPage({
-            path: edge.node.fields.slug,
-            component: slash(postTemplate),
-            context: { slug: edge.node.fields.slug },
-          })
+      const results = result.data.allMarkdownRemark.edges
+      const pages = results.filter(page => page.node.frontmatter.layout === 'page')
+      const posts = results.filter(post => post.node.frontmatter.layout === 'post')
 
-          let tags = []
-          if (_.get(edge, 'node.frontmatter.tags')) {
-            tags = tags.concat(edge.node.frontmatter.tags)
-          }
+      // Create the paginated post indexes.
+      createPaginatedPages({
+        edges: posts,
+        pageTemplate: 'src/templates/home-template.js',
+        createPage,
+      })
 
-          tags = _.uniq(tags)
-          _.each(tags, tag => {
-            const tagPath = `/tags/${_.kebabCase(tag)}/`
-            createPage({
-              path: tagPath,
-              component: tagTemplate,
-              context: { tag },
-            })
-          })
+      // Create the pages.
+      pages.forEach(page => {
+        createPage({
+          path: page.node.fields.slug,
+          component: slash(pageTemplate),
+          context: { slug: page.node.fields.slug },
+        })
+      })
 
-          let categories = []
-          if (_.get(edge, 'node.frontmatter.category')) {
-            categories = categories.concat(edge.node.frontmatter.category)
-          }
+      // And the posts.
+      posts.forEach(post => {
+        createPage({
+          path: post.node.fields.slug,
+          component: slash(postTemplate),
+          context: { slug: post.node.fields.slug },
+        })
 
-          categories = _.uniq(categories)
-          _.each(categories, category => {
-            const categoryPath = `/categories/${_.kebabCase(category)}/`
-            createPage({
-              path: categoryPath,
-              component: categoryTemplate,
-              context: { category },
-            })
-          })
+        let tags = []
+        if (_.get(post, 'node.frontmatter.tags')) {
+          tags = tags.concat(post.node.frontmatter.tags)
         }
+
+        tags = _.uniq(tags)
+        _.each(tags, tag => {
+          const tagPath = `/tags/${_.kebabCase(tag)}/`
+          createPage({
+            path: tagPath,
+            component: tagTemplate,
+            context: { tag },
+          })
+        })
+
+        let categories = []
+        if (_.get(post, 'node.frontmatter.category')) {
+          categories = categories.concat(post.node.frontmatter.category)
+        }
+
+        categories = _.uniq(categories)
+        _.each(categories, category => {
+          const categoryPath = `/categories/${_.kebabCase(category)}/`
+          createPage({
+            path: categoryPath,
+            component: categoryTemplate,
+            context: { category },
+          })
+        })
       })
 
       resolve()

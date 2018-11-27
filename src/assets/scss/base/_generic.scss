@@ -150,6 +150,11 @@ figcaption {
     &__inner {
         padding: 25px 20px;
     }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @include breakpoint-sm {

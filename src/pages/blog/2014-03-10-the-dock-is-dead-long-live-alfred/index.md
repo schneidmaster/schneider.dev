@@ -23,7 +23,7 @@ Alfred is perhaps the most useful app I have installed on my Mac.  It serves a s
 3. Under the 'Features' pane, I recommend instructing Alfred to index all of the file types; Alfred is extremely fast at finding a file when you remember the name but don't remember where it's at or don't want to navigate a pesky folder structure.  Also, click 'Applications' in the left sidebar and enable fuzzy matching for applications.  This makes it so, for example, Chrome will still come up as an option if you're speeding and type 'Chorme', something I tend to do frequently.
 4. Under the 'Appearance pane', I recommend a couple of changes to make Alfred look less intrusive.  Select the 'OSX Lion' theme, and check the options to 'Hide hat on Alfred window', 'Hide prefs cog on Alfred window', and 'Hide menu bar icon'.  This makes Alfred appear very minimalist and makes it blend in nicely with the operating system, like so:
 
-![](http://i.imgur.com/Acfiydk.png)
+![Screenshot of Alfred](./alfred.png)
 
 Next up, I recommend hiding the Spotlight icon in the menu bar- it doesn't serve any particularly useful purpose since you're no longer using Spotlight.  This can be done with the following terminal commands:
 

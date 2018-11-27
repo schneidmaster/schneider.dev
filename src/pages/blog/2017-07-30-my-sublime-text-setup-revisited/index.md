@@ -39,7 +39,7 @@ Sublime is nicely themeable and there's a number of quality options on Package C
 
 All together, my setup looks like this:
 
-![Sublime Setup](http://i.imgur.com/gPrE56o.png)
+![Screenshot of Sublime Text](./sublime.png)
 
 ### Functionality
 

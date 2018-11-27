@@ -28,7 +28,7 @@ The first gem, token-text-area, is focused around the rich editing experience. T
 
 As you can see in the screenshot, this allows for a rich editing experience in which the user can quickly develop complex formulas based on how each metric affects their business process. To insert the tokens, we provided autocomplete support. The user simply has to begin typing the name of a metric; once they do, a popup menu suggests tokens to insert.
 
-![token-text-area screenshot](http://k1w1-aha-blog.s3.amazonaws.com/uploads/2015/06/advanced-equations-contenteditable-aha.png)
+![Screenshot of token-text-area](./advanced-equations-contenteditable-aha.png)
 
 The hardest part of this implementation step was developing consistent cross-browser behavior in contenteditable divs. For example, Chrome will not blink the cursor in a contenteditable div that is focused but does not contain any text, while Internet Explorer displays odd behavior with mouse click bindings.
 

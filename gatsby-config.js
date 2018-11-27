@@ -7,10 +7,9 @@ module.exports = {
     title: 'Zach Schneider',
     subtitle: 'Rails, React, & Sundry',
     copyright: '© All rights reserved.',
-    disqusShortname: 'blog-schneidmaster',
     menu: [
       {
-        label: 'Articles',
+        label: 'Blog',
         path: '/',
       },
       {

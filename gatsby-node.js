@@ -123,7 +123,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: value.replace(/articles\//, '').replace(/pages\//, '').replace(/\d\d\d\d-\d\d-\d\d-/, ''),
+      value: value.replace(/pages\//, '').replace(/\d\d\d\d-\d\d-\d\d-/, ''),
     })
 
     if (node.frontmatter.tags) {

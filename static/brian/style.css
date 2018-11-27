@@ -1,0 +1,178 @@
+html, body {
+    margin: 0px;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    background-image: url(img/bg.jpg);
+    background-attachment:fixed;
+    background-size: 100%;
+    background-repeat:no-repeat;
+}
+
+img {
+    border: none;
+}
+
+main {
+    display: block;
+    width: 800px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.outer {
+    width: 794px;
+    border: solid white 3px;
+    box-shadow: 0px 0px 3px 3px #333;
+    margin-top: 50px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+div.outer.first {
+    margin-top: 0px;
+}
+
+div.inner {
+    width: 762px;
+    border: solid #999 1px;
+    background-color: white;
+    padding: 15px;
+}
+
+#profileimg {
+    width: 361px;
+    padding: 10px;
+    padding-right: 10px;
+}
+
+#profilebox {
+    padding-top: 55px;
+    width: 371px;
+    text-align: center;
+    float: right;
+    font-size: 18px;
+}
+
+#profilebox .title {
+    font-size: 34px;
+}
+
+#profilebox div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+#designbox {
+    width: 762px;
+    height: 435px;
+}
+
+#designbox .design {
+    width: 358px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 200px;
+    float: left;
+    border: solid 1px #999;
+    margin-bottom: 20px;
+}
+
+#designbox .design.thedir, #designbox .design.briansultzman {
+    padding-top: 40px;
+    height: 160px;
+}
+
+#designbox .design.briansultzmanme
+{
+    padding-top: 20px;
+    height: 180px;
+}
+
+#designbox .design.bottomrow {
+    margin-bottom: 0px;
+}
+
+#designbox .design.briansultzman img {
+    width: 338px;
+}
+
+#designbox .design img {
+    width: 341px;
+    padding: 10px;
+}
+
+#photobox {
+    width: 762px;
+    height: 815px;
+}
+
+#photobox .photo {
+    width: 359px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    margin-bottom: 25px;
+}
+
+#photobox .photo.bottomrow {
+    margin-bottom: 0px;
+}
+
+#photobox .photo img {
+    max-width: 341px;
+    max-height: 225px;
+    padding: 10px;
+    border: solid 1px #999;
+}
+
+#musicbox {
+    width: 762px;
+    height: 380px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#musicbox p {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+
+#musicbox a {
+    color: black;
+    text-decoration: none;
+}
+
+#musicbox a:hover {
+    text-decoration: underline;
+}
+
+#jp_container_1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#memorybox .memory {
+    width: 742px;
+    padding: 10px;
+    padding-bottom: 35px;
+    border-bottom: solid 1px #999;
+}
+
+#memorybox .memory.last {
+    border-bottom: none;
+}
+
+h2 {
+    color: #3b5998;
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>    <html class="ie"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--> <html> <!--<![endif]-->
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="In memory of the life of Brian Sultzman." />
+
+        <meta property="og:image" content="https://schneid.io/brian/img/brian.jpg" />
+        <meta property="og:title" content="Brian Thomas Sultzman" />
+        <meta property="og:url" content="https://schneid.io/brian/" />
+        <meta property="og:description" content="In memory of the life of Brian Sultzman." />
+
+        <title>
+            Brian Thomas Sultzman
+        </title>
+
+        <link rel="icon" type="image/png" href="img/favicon.png">
+
+        <link href='https://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+        <link type="text/css" href="style.css" rel="stylesheet" />
+        <link type="text/css" href="jplayer/skin/jplayer.blue.monday.css" rel="stylesheet" />
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+        <script type="text/javascript" src="jplayer/jquery.jplayer.min.js"></script>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-32457868-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+                if(window.location.href.indexOf('http:') != -1) {
+                    window.location.href = window.location.href.replace('http:', 'https:');
+                }
+
+                $("#jquery_jplayer_1").jPlayer({
+                    ready: function () {
+                        $(this).jPlayer("setMedia", {
+                            mp3: "music/1FlowerDress.mp3"
+                        });
+                    },
+                    swfPath: "/jplayer",
+                    supplied: "mp3"
+                });
+
+                $(".music-link").click(function() {
+
+                    $("#jquery_jplayer_1").jPlayer("setMedia", { mp3: $(this).attr("target") }).jPlayer("play");
+                    $(".jp-title ul li").html($(this).html());
+
+                    return false;
+
+                })
+
+                if ($('html').is('.ie')) {
+                    $('html').html("");
+                    $('html').html('Your browser is not supported.  This page is functional on IE9+ and all other modern browsers.  Please see <a href="http://www.smashingmagazine.com/2012/07/10/dear-web-user-please-upgrade-your-browser/">this</a> for more details.');
+                }
+
+            });
+        </script>
+
+        <main>
+            <div class="outer first">
+                <div class="inner">
+                    <img src="img/brian.jpg" alt="Brian Thomas Sultzman" id="profileimg"/>
+                    <div id="profilebox">
+                        <div>in memory of</div>
+                        <div class="title">Brian Thomas Sultzman</div>
+                        <div>
+                            november 25, 1991 - august 14, 2013<br />
+                            with love, by Zach Schneider
+                        </div>
+                        <div>
+                            friend, brother, son<br />
+                            photographer, designer, musician<br />
+                            seeker, lover, dreamer
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="outer">
+                <div class="inner">
+                    <h1>
+                        Design
+                    </h1>
+                    <div id="designbox">
+                        <a href="http://thedir.me">
+                            <div class="design thedir">
+                                <img src="img/thedir.png" alt="thedir.me">
+                            </div>
+                        </a>
+                        <a href="http://www.pokemonbeo.com">
+                            <div class="design">
+                                <img src="img/pokemonbeo.png" alt="pokemonbeo.com">
+                            </div>
+                        </a>
+                        <a href="http://www.briansultzman.com">
+                            <div class="design bottomrow briansultzman">
+                                <img src="img/briansultzman.png" alt="briansultzman.com">
+                            </div>
+                        </a>
+                        <a href="http://briansultzman.me">
+                            <div class="design bottomrow briansultzmanme">
+                                <img src="img/briansultzmanme.png" alt="briansultzman.me">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="outer">
+                <div class="inner">
+                    <h1>
+                        Photography
+                    </h1>
+                    <div id="photobox">
+                        <div class="photo">
+                            <img src="img/gull.jpg" alt="Solomons Island, All the Best">
+                        </div>
+                        <div class="photo">
+                            <img src="img/bee.jpg" alt="Dowell Lane, All the Best">
+                        </div>
+                        <div class="photo">
+                            <img src="img/heaven.jpg" alt="Ohian Travels, Only the Best">
+                        </div>
+                        <div class="photo">
+                            <img src="img/overpass.jpg" alt="Maryland &ne; Boston">
+                        </div>
+                        <div class="photo bottomrow">
+                            <img src="img/twentyten.jpg" alt="Once upon Twenty-ten">
+                        </div>
+                        <div class="photo bottomrow">
+                            <img src="img/portrait.jpg" alt="Portraits Only the Best">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="outer">
+                <div class="inner">
+                    <h1>
+                        Music
+                    </h1>
+                    <div id="musicbox">
+                        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                        <div id="jp_container_1" class="jp-audio">
+                            <div class="jp-type-single">
+                                <div class="jp-gui jp-interface">
+                                    <ul class="jp-controls">
+                                        <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                                        <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                                        <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                                        <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                                        <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                                        <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+                                    </ul>
+                                    <div class="jp-progress">
+                                        <div class="jp-seek-bar">
+                                            <div class="jp-play-bar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-volume-bar">
+                                        <div class="jp-volume-bar-value"></div>
+                                    </div>
+                                    <div class="jp-time-holder">
+                                        <div class="jp-current-time"></div>
+                                        <div class="jp-duration"></div>
+                                        <ul class="jp-toggles">
+                                            <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                                            <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="jp-title">
+                                    <ul>
+                                        <li>Flower Dress</li>
+                                    </ul>
+                                </div>
+                                <div class="jp-no-solution">
+                                    <span>Update Required</span>
+                                    To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            <a href="#" class="music-link" target="music/1FlowerDress.mp3">
+                                Flower Dress
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="music-link" target="music/2PerLaDonna.mp3">
+                                Per La Donna
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="music-link" target="music/3Spring.mp3">
+                                Spring
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="music-link" target="music/4GranMiedo.mp3">
+                                Gran Miedo
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="music-link" target="music/5AutumnsSunset.mp3">
+                                Autumn's Sunset
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="music-link" target="music/6Nesprite.mp3">
+                                Nesprite
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="outer">
+                <div class="inner">
+                    <h1>
+                        Memories
+                    </h1>
+
+                    <div id="memorybox">
+
+                        <div class="memory">
+                            <h2>
+                                Zach Schneider
+                            </h2>
+                            Life goes on. Life goes on and sometimes good people just don't make it. You're in middle school staying up all night playing Zelda and then you're in high school driving around aimlessly and then you're in college and he's gone at 21. All of the answers just seem so hollow in the face of something like this. God loves everybody but things here just get so broken that people can't handle it anymore sometimes. I guess life still goes on anyway.<br /><br />
+
+                            Rip Brian Sultzman.
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Jennifer Baker
+                            </h2>
+                            What can I even say? My simple words cannot begin to express my despair. Brian, you were a light in my life. We laughed and cried together (more laughter, of course) and our last visit had me in stitches. I am so glad that God allowed our lives to cross. I'm glad that you were a silly, slightly annoying student in my math class. I'm glad that when you came to visit we could smell your cigarette remnants for days, even tho I gave you a hard time about it. I'm glad that when you were over, you would stay so late I was falling asleep on you. I'm glad that you always drank that stupid diet Coke and when I insisted you eat some home-cooked food, you so firmly refused. I'm glad you made the slide show for the class of 2012 and you left off my own daughter's name. I'm glad you created a lovely logo for my business even tho you wanted it your way more than mine. I'm glad that we took that quirky picture at your junior-senior banquet; now I have to get a copy of it, if I can even remember who took it. I'm glad you poured your heart out to me over your passions and struggles; its with great honor and humility that you found me worthy. May you rest in glory now. May you know how deeply you are loved and how passionately you will be missed. I'm glad I got one last hug. And I will always have my iPod inscribed with "Jennifer Baker is a great teacher and friend - Brian." You got me on that one. I love you Brian Thomas!!
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Jesse Baldwin
+                            </h2>
+                            I love you very much Brian Sultzman. I am deeply sorry about what has happened. You have been my best friend since 7th grade, my date at Senior Prom, and out of all of our classmates, you were the only one that kept in constant contact and that means the world to me. You could make me laugh until I cried. We were just joking about the My Little Pony convention the other day... I'm so sorry for every text that I left sitting in my inbox and every phone call that I was too busy to take. Sometimes the world wasn't a very nice place for you, and you were very misunderstood and judged by a lot people, but you are in a much more accepting place now. You were such an amazing and talented young man. Your music touched hundreds. You will always have a place in my heart as my best friend. I love you and I will miss you always.
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Brian Wallace
+                            </h2>
+                            I hope the light is clear there<br />
+                            I hope the air is fair there<br />
+                            I hope you are loved dear there<br />
+                            I hope you are still rare there<br /><br />
+
+                            Save us a seat, ok?
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Tj Bell
+                            </h2>
+                            Hey man I can't believe your gone I've known you sense seventh grade and we quickly became close friends. We've done everything from singing bohemium rapcity at the top of our lungs to staying up and just talking about nothing you were more than a friend to me you were like the brother I never had. You always knew what to say to make anyone feel better and laugh I'll always love you and I'll never forget you.
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Keri Puckett
+                            </h2>
+                            Brian. Dude. I'm gonna miss you. Thanks for the laughs, the hugs, the pictures... The advice. You were one of the cleverest, wittiest guys I know! And your smile was infectious... I'm really going to miss that. High school was a better place because you were there. I can't wait to see you again. Rest in peace, Brian.
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Jess Soper
+                            </h2>
+                            Brian, I couldn't believe when I heard.. I'll never forget all the fun times we had on the bus! You were always so funny and sweet! You always made everyone on the back of the bus laugh with all your funny voices and sense of humor. You were an AMAZING artist and photographer! I don't understand why things had to happen that way, but everything happens for a reason and you are in a better place! I wish I had texted you more when I thought about you but I didn't think you'd wanna talk to me.. I'll always remember you and the long Kca bus rides from Calvert County to school. R.I.P Brian
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Elizabeth Funk
+                            </h2>
+                            I am so sad, but so blessed and thankful to have been friends with Brian Sultzman. He was always hilarious, always there for me, and an awesome brother in Christ. I praise God for all the great times we had together back in high school! Brian, you are so missed and so loved!
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                La Davis
+                            </h2>
+                            Wow ... I never knew I would live to see the day where one of my peers passed so young. Death always seems so far removed from our lives that we take it for granted daily. You are a beautiful soul Brian Sultzman and I may not fully understand the why, but I suppose God needed you now more than the world did. May your memories bring peace and comfort to your loved ones.  Rest in peace dear friend. Prayers are going up for everyone that you touched in your lifetime.
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Austin Makar
+                            </h2>
+                            For all of you that knew Brian Sultzman he was a great guy, a best friend, a great consultant and confidant when you needed one and to me he couldn't have been a more amazing brother. I was so grateful to have him there when I needed someone to just hang out with or to complain to when something didn't go right. Brian, you'll always be my brother and it'll suck not having you to hang out with. I hope heaven is as great a place as the bible describes it cuz you deserve the best bud. Rest in peace Brian Sultzman
+                        </div>
+                        <div class="memory">
+                            <h2>
+                                Savannah Hill
+                            </h2>
+                            I remember memories with you. I know you are in a better place now, and I'm sorry we lost touch. I will never forget you.
+                        </div>
+                        <div class="memory last">
+                            <h2>
+                                Erin Kerley
+                            </h2>
+                            Something's in this life don't make sense, seem unfair,situations that break your heart. But there is hope when things seem out of hand or that are out of our control. thankful that we can find peace in Christ alone....As we mourn the loss of an amazing friend nice guy, and a man full of talent! Rest in peace to my good friend Brian, you will always be in our hearts.
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+    </body>
+</html>

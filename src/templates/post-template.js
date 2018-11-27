@@ -36,7 +36,10 @@ export const pageQuery = graphql`
         copyright
         author {
           name
+          email
           twitter
+          github
+          linkedin
         }
         url
       }

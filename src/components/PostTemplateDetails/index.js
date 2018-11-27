@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import moment from 'moment'
+import Links from '../Links'
+import profilePic from '../../pages/avatar.png'
 import './style.scss'
 
 class PostTemplateDetails extends React.Component {
   render() {
-    const { subtitle, author } = this.props.data.site.siteMetadata
+    const { author, subtitle, url } = this.props.data.site.siteMetadata
     const post = this.props.data.markdownRemark
     const tags = post.fields.tagSlugs
 
@@ -52,16 +54,23 @@ class PostTemplateDetails extends React.Component {
           <div className="post-single__footer">
             {tagsBlock}
             <hr />
-            <p className="post-single__footer-text">
-              {subtitle}
-              <a
-                href={`https://twitter.com/${author.twitter}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <br /> <strong>{author.name}</strong> on Twitter
-              </a>
-            </p>
+            <div className="post-single__footer-bio-container">
+              <div className="post-single__footer-bio">
+                <div className="post-single__footer-bio-avatar">
+                  <img
+                    src={profilePic}
+                    width="75"
+                    height="75"
+                    alt={author.name}
+                  />
+                </div>
+                <div className="post-single__footer-bio-desc">
+                  <h4>Zach Schneider</h4>
+                  {subtitle}
+                  <Links siteUrl={url} data={author} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

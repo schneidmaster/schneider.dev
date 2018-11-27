@@ -43,7 +43,10 @@ class Sidebar extends React.Component {
             </Link>
           </h2>
         )}
-        <p className="sidebar__author-subtitle">{subtitle}</p>
+        <p className="sidebar__author-subtitle">
+          {subtitle}<br />
+          Engineering lead at <a href="https://www.aha.io">Aha!</a>
+        </p>
       </div>
     )
     /* eslint-enable jsx-a11y/img-redundant-alt */

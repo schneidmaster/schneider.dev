@@ -106,6 +106,28 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          {
+            resolve: 'gatsby-remark-social-cards',
+            options: {
+              background: '#002952',
+              title: {
+                color: 'white',
+              },
+              meta: {
+                color: 'white',
+                fields: [
+                  'date',
+                ],
+                parts: [
+                  'Zach Schneider | ',
+                  {
+                    field: 'date',
+                    format: 'mmmm dS, yyyy',
+                  },
+                ],
+              },
+            },
+          },
         ],
       },
     },

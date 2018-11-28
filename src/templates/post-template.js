@@ -6,7 +6,7 @@ import PostTemplateDetails from '../components/PostTemplateDetails'
 
 class PostTemplate extends React.Component {
   render() {
-    const { title, subtitle, url } = this.props.data.site.siteMetadata
+    const { title, subtitle, url, author: { twitter } } = this.props.data.site.siteMetadata
     const post = this.props.data.markdownRemark
     const { title: postTitle, description: postDescription } = post.frontmatter
     const description = postDescription !== null ? postDescription : subtitle
@@ -22,6 +22,12 @@ class PostTemplate extends React.Component {
             <meta name="og:url" content={url + post.fields.slug} />
             <meta name="og:site_name" content={title} />
             <meta name="og:type" content="article" />
+            <meta name="og:image" content={`${url}${post.fields.slug}twitter-card.jpg`} />
+            <meta name="twitter:creator" content={`@${twitter}`} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={postTitle} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content={`${url}${post.fields.slug}twitter-card.jpg`} />
           </Helmet>
           <PostTemplateDetails {...this.props} />
         </div>

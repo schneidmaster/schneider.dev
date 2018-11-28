@@ -17,10 +17,11 @@ class PostTemplate extends React.Component {
           <Helmet>
             <title>{`${postTitle} - ${title}`}</title>
             <meta name="description" content={description} />
-            <meta property="og:title" content={postTitle} />
-            <meta property="og:url" content={url + post.fields.slug} />
-            <meta property="og:site_name" content={title} />
-            <meta property="og:type" content="article" />
+            <meta name="og:title" content={postTitle} />
+            <meta name="og:description" content={description} />
+            <meta name="og:url" content={url + post.fields.slug} />
+            <meta name="og:site_name" content={title} />
+            <meta name="og:type" content="article" />
           </Helmet>
           <PostTemplateDetails {...this.props} />
         </div>

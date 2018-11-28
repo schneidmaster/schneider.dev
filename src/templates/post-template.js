@@ -6,7 +6,14 @@ import PostTemplateDetails from '../components/PostTemplateDetails'
 
 class PostTemplate extends React.Component {
   render() {
-    const { title, subtitle, url, author: { twitter } } = this.props.data.site.siteMetadata
+    const {
+      title,
+      subtitle,
+      url,
+      author: {
+        twitter,
+      },
+    } = this.props.data.site.siteMetadata
     const post = this.props.data.markdownRemark
     const { title: postTitle, description: postDescription } = post.frontmatter
     const description = postDescription !== null ? postDescription : subtitle
@@ -54,6 +61,7 @@ export const pageQuery = graphql`
           github
           linkedin
         }
+        disqusShortname
         url
       }
     }

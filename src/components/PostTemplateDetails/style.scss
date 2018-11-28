@@ -16,7 +16,6 @@
         text-align: center;
         @include line-height(1.65);
         @include margin-top(1);
-        @include margin-bottom(0);
     }
     &__body {
         & figure {
@@ -56,10 +55,11 @@
         margin-right: 15px;
         @include line-height(1);
         @include margin-top(1);
-        @include margin-bottom(2);
+        @include margin-bottom(1);
         &-bio-container {
             display: flex;
             justify-content: space-around;
+            @include margin-bottom(2);
         }
         &-bio {
             display: flex;
@@ -90,37 +90,17 @@
             }
         }
     }
-    &__date {
+    &__dateline {
         max-width: $layout-post-single-width;
         margin-left: auto;
         margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: $typographic-base-font-size;
     }
-    &__tags {
-        @include margin-bottom(.5);
-        &-list {
-            list-style: none;
-            margin: 0 -5px;
-            padding: 0;
-            &-item {
-                display: inline-block;
-                margin: 10px 5px;
-                &-link {
-                    background: $color-gray-bg;
-                    text-decoration: none;
-                    border: 0;
-                    border-radius: 3px;
-                    color: lighten($color-base, 20%);
-                    line-height: $typographic-base-line-height;
-                    padding: 8px 16px;
-                    &:hover,
-                    &:focus {
-                        color: $color-base;
-                        background: darken($color-gray-bg, 5%);
-                        border: 0;
-                    }
-                }
-            }
-        }
+    &__date {
+        flex-shrink: 0;
+        @include margin-left(0.5);
     }
     &__home-button {
         display: block;

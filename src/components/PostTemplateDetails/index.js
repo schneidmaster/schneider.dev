@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import moment from 'moment'
+import Disqus from '../Disqus'
 import Links from '../Links'
 import profilePic from '../../assets/avatar.png'
 import './style.scss'
@@ -19,40 +20,34 @@ class PostTemplateDetails extends React.Component {
       </div>
     )
 
-    const tagsBlock = (
-      <div className="post-single__tags">
-        <ul className="post-single__tags-list">
-          {tags &&
-            tags.map((tag, i) => (
-              <li className="post-single__tags-list-item" key={tag}>
-                <Link to={tag} className="post-single__tags-list-item-link">
-                  {post.frontmatter.tags[i]}
-                </Link>
-              </li>
-            ))}
-        </ul>
-      </div>
-    )
-
     return (
       <div>
         {homeBlock}
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
+            <div className="post-single__dateline">
+              <div className="post-single__tags">
+                Tags: {tags.map((tag, i) => (
+                  <Fragment key={tag}>
+                    <Link key={tag} to={tag} className="post-single__tag">
+                      {post.frontmatter.tags[i]}
+                    </Link>
+                    {i + 1 < tags.length && ', '}
+                  </Fragment>
+                ))}
+              </div>
+              <div className="post-single__date">
+                {moment(post.frontmatter.date).format('MMMM D, YYYY')}
+              </div>
+            </div>
             <div
               className="post-single__body"
               /* eslint-disable-next-line react/no-danger */
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-            <div className="post-single__date">
-              <em>
-                Published {moment(post.frontmatter.date).format('D MMM YYYY')}
-              </em>
-            </div>
           </div>
           <div className="post-single__footer">
-            {tagsBlock}
             <hr />
             <div className="post-single__footer-bio-container">
               <div className="post-single__footer-bio">
@@ -71,6 +66,11 @@ class PostTemplateDetails extends React.Component {
                 </div>
               </div>
             </div>
+
+            <Disqus
+              postNode={post}
+              siteMetadata={this.props.data.site.siteMetadata}
+            />
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@
     "build": "gatsby build",
     "clean:public": "rm -rf public",
     "clean": "npm run clean:public",
-    "lint": "./node_modules/.bin/eslint --cache --ext .js --ignore-pattern public .",
+    "lint": "./node_modules/.bin/eslint --cache --ext .js .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write './*.js' 'src/**/*.js'",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"

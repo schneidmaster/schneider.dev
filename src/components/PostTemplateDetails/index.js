@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import moment from 'moment'
 import Links from '../Links'
-import profilePic from '../../pages/avatar.png'
+import profilePic from '../../assets/avatar.png'
 import './style.scss'
 
 class PostTemplateDetails extends React.Component {

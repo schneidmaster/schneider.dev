@@ -8,7 +8,7 @@ import Sidebar from '../components/Sidebar'
 class IndexRoute extends React.Component {
   render() {
     const items = []
-    const { title, subtitle } = this.props.data.site.siteMetadata
+    const { title, subtitle, url } = this.props.data.site.siteMetadata
     const {
       group: posts,
       index,
@@ -24,6 +24,10 @@ class IndexRoute extends React.Component {
           <Helmet>
             <title>{title}</title>
             <meta name="description" content={subtitle} />
+            <meta property="og:title" content={title} />
+            <meta property="og:url" content={url} />
+            <meta property="og:site_name" content={title} />
+            <meta property="og:type" content="website" />
           </Helmet>
           <Sidebar {...this.props} />
           <div className="content">

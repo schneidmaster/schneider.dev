@@ -24,11 +24,11 @@ class IndexRoute extends React.Component {
           <Helmet>
             <title>{title}</title>
             <meta name="description" content={subtitle} />
-            <meta name="og:title" content={title} />
-            <meta name="og:description" content={subtitle} />
-            <meta name="og:url" content={url} />
-            <meta name="og:site_name" content={title} />
-            <meta name="og:type" content="website" />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={subtitle} />
+            <meta property="og:url" content={url} />
+            <meta property="og:site_name" content={title} />
+            <meta property="og:type" content="website" />
           </Helmet>
           <Sidebar {...this.props} />
           <div className="content">

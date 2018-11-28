@@ -146,6 +146,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
+        appName: 'Zach Schneider',
+        background: '#002952',
+        theme_color: '#002952',
         logo: './src/assets/favicon.png',
       },
     },

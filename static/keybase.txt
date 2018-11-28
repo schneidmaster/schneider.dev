@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/schneidmaster
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://schneid.io
+  * I am schneidmaster (https://keybase.io/schneidmaster) on keybase.
+  * I have a public key with fingerprint 52CB 6EAB 53C8 0D70 3C94  4A20 51C2 084C 8886 D61E
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.8"
+        },
+        "key": {
+            "fingerprint": "52cb6eab53c80d703c944a2051c2084c8886d61e",
+            "host": "keybase.io",
+            "key_id": "51C2084C8886D61E",
+            "uid": "d31789ce836c18a1416141b362446900",
+            "username": "schneidmaster"
+        },
+        "merkle_root": {
+            "ctime": 1431385761,
+            "hash": "c565025423190ca5ead045f9f973381022f250820d6bb192a4378d0a4bf961e8c8f74ea10951233e5bf918acc39815b7fd98fa8818a3252e08f602bad5f28fc0",
+            "seqno": 219764
+        },
+        "service": {
+            "hostname": "schneid.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1431385837,
+    "expire_in": 157680000,
+    "prev": "a30173341e3965494a80f0a8df0d7c58ebf8b0ad4aeb70dc5c54e87794e10d13",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVkntoHEUcx+8Sq2ekL1QEqSVurCKEyzx3Zw9tK22lNbGYaOW06DGvTdbe7d7t
+btPG5LRICS0UiY/4qFqKoEEqpa0VEal/KBSiWEmhVlFTXwgqKharqG1wJkY0Cwu7
+v/nMd77f32/GFrbmWvK97xR6do1+tDz//ncit6nX/XHYEbEackrDjqyGOsrsV8Rr
+2ik5W/SQ4KkuhnF7FCtdfCBtn2M6nUGdpGEcGQoUvSJzmp0Wt5uDMOrXST0JrZZD
+kRSu5oJiyYDyAJY+IRwBCiUCjEjGmKtcqI3kQJxm8051ZjUrobI6cI3l11h+rQvX
+mbWtswsKQ4/5UjPsSsg4JNA1r8AuIsT1AbBgqpO5SKkciHSoajzNdGJN13Sypaor
+SRzPJpdZaDlIMMSMei40tng6YHZK6lKAKEEY+kByqrkChAZ+4HsYMwgQChAFDAHl
+CgF9xAn2mAKciMA3+ZhkgUc0h8CnEGGsqakbv1Jin0EqvED5LOCMmRpGFGnAAhcg
+wRUNEAukzZHqRhQ7JQR9zyVN+58MhlJb37Z38yP+0796EmexjKumPpBl9bRkM2dD
+dQse2aZFZU6jIsJImcH9f7LQoPP7wbDX6ejt9TDRldASpkMMmMcepAeNJscAmn4Q
+qLHvUuITzkAAOFOBGb6kTIuACcAV4Vp4QEkqKdHM83yiIVAQ/5cSYmOU99tAYX/E
+s62Jdpq788suyuVbchcvaLF3N9d26ZJ/L/SypYXcSztGdl3RdWNPPHFy5cuDbYf3
+t4xufxf6fQXsPfbXjsWrNjYKx36+u60bjhz74uPVp8cf6djTNf1Q7Zbzf37+RPbU
+iStf+X3f22/IPbx38st7y0++2VboGP3wUNfBX3fuvXN1s/v4W5eP7zxcXTxzdfma
+U000PlVqb73wuljx/f3X3/b8DxMHJl9bd0/Ze/RC34bGuQ3PHX1hemrRHeUXH/9q
+Zv+po7c+OLFg8txnd+0bap3p0ws3X3J6eMn6897YZStWdnUMg1dvon+81/0BP7v+
+5ube6Ypz+9Sq8m/XjWy+b+OZI2PX1j6pNj59+Gyl7+vG07u/ffaZXw6c+WnbVT0n
+k+D4ohPFteKb5Z11dkOet/8N
+=EYoD
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/schneidmaster
+
+==================================================================

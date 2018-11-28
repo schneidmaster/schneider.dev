@@ -7,7 +7,7 @@ const Disqus = ({ postNode, siteMetadata }) => {
   return (
     <ReactDisqusComments
       shortname={siteMetadata.disqusShortname}
-      identifier={post.title}
+      identifier={postNode.fields.slug.replace(/\/$/, '')}
       title={post.title}
       url={url}
     />

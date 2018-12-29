@@ -11,7 +11,7 @@ class Post extends React.Component {
       date,
       category,
     } = this.props.data.node.frontmatter
-    const { slug, categorySlug } = this.props.data.node.fields
+    const { slug, categorySlug, readingTime } = this.props.data.node.fields
 
     return (
       <div className="post">
@@ -36,7 +36,7 @@ class Post extends React.Component {
         </h2>
         <p className="post__description">{excerpt}</p>
         <Link className="post__readmore" to={slug}>
-          Read
+          More ({readingTime.text}) →
         </Link>
       </div>
     )

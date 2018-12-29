@@ -29,6 +29,9 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
                 categorySlug
+                readingTime {
+                  text
+                }
               }
               frontmatter {
                 layout

@@ -11,6 +11,7 @@ class PostTemplateDetails extends React.Component {
     const { author, subtitle, url } = this.props.data.site.siteMetadata
     const post = this.props.data.markdownRemark
     const tags = post.fields.tagSlugs
+    const readingTime = post.fields.readingTime.text
 
     const homeBlock = (
       <div>
@@ -27,25 +28,25 @@ class PostTemplateDetails extends React.Component {
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
             <div className="post-single__dateline">
-              <div className="post-single__tags">
-                Tags: {tags.map((tag, i) => (
-                  <Fragment key={tag}>
-                    <Link key={tag} to={tag} className="post-single__tag">
-                      {post.frontmatter.tags[i]}
-                    </Link>
-                    {i + 1 < tags.length && ', '}
-                  </Fragment>
-                ))}
-              </div>
-              <div className="post-single__date">
-                {moment(post.frontmatter.date).format('MMMM D, YYYY')}
-              </div>
+              {moment(post.frontmatter.date).format('MMMM D, YYYY')}
+              {'\xa0\u2022\xa0'}
+              {readingTime}
             </div>
             <div
               className="post-single__body"
               /* eslint-disable-next-line react/no-danger */
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
+            <div className="post-single__tags">
+              <em>Tags:</em>{'\xa0'}{tags.map((tag, i) => (
+                <Fragment key={tag}>
+                  <Link key={tag} to={tag} className="post-single__tag">
+                    {post.frontmatter.tags[i]}
+                  </Link>
+                  {i + 1 < tags.length && ',\xa0'}
+                </Fragment>
+              ))}
+            </div>
           </div>
           <div className="post-single__footer">
             <hr />

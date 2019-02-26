@@ -74,3 +74,70 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/schneidmaster
 
 ==================================================================
+
+==================================================================
+https://keybase.io/schneidmaster
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://schneider.dev
+  * I am schneidmaster (https://keybase.io/schneidmaster) on keybase.
+  * I have a public key with fingerprint 52CB 6EAB 53C8 0D70 3C94  4A20 51C2 084C 8886 D61E
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010128a69b7382fb11367e02e7e3407b7afb66648e6bab7f93ff7edeea3854a08c820a",
+      "fingerprint": "52cb6eab53c80d703c944a2051c2084c8886d61e",
+      "host": "keybase.io",
+      "key_id": "51c2084c8886d61e",
+      "kid": "010128a69b7382fb11367e02e7e3407b7afb66648e6bab7f93ff7edeea3854a08c820a",
+      "uid": "d31789ce836c18a1416141b362446900",
+      "username": "schneidmaster"
+    },
+    "service": {
+      "hostname": "schneider.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1551150790,
+  "expire_in": 157680000,
+  "prev": "26f1f3ec5c21010530cfd41fa007e91ccc095a41fb1f9b96c93fc1cf03ed5106",
+  "seqno": 34,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUllIFVEYvletXLJ6CI0Wq6mHQotzZjkzc7PloaewbMGHJLidOXPmOi4z986M
+ml0sC1qEIAuJjIoiKMkNCrLkWrZIi5SCKGGY9SDRQwstkhTUGamHoMcOHA7n/7/v
++///42/ITA6kBrfdSy04eng4J9j3Vgvs8tpH4pxm6zVcKM6V0amHluvU9cJlps6F
+OAAB5BWMVE0WFN7QIBSQTAFPZSqIQNZkbGgIIVGhSMOabKiCYchUpxQLiiRioBCF
+B5jL4wzTilAn6piWx2QlnmiIYk0SiAJ0GQhEFUXMAwkSHigiURQF6QhSRiyxXZ/B
+mtOwS1ebNouxT3iqvX/g/3PflVNyugBlRSVUERCBCoYiROxqAuJFEakA+ECXOhau
+oAztkhKLmnoFdj3qcLV5HEtVmYT67vrj/A2jzmqdVjGFqGN7NrHLWarE86JuyKd6
+NVEfW0218G+VsGZaOnOTMaqo45q2xYUgQxLP9GWhJEEoAVkFeRzdEzUdGjZ9hCQj
+BbDj12HlQhwfRgY0BEokwjO3gCQAYugiNDAAMlUhIQSoEmYBDRqqpiLCTCKQGECg
+ugQB4vzBYpbNhQSRNYoj/kxmxMJepUO52vT6oJASCKYGFmUtTdneZ7XseJQZzW/c
+tOTPCk5L8vcvkJ4250+koWjGz8Kc5aHE1ZFDwpW3h3u+lPRWL3wTOtemz0/sf9P0
+6vH+/uSha9dzZ2+xTq8Zbd74ja+Lv3zi1n/osdpqHs+jsXb7Vkv07NJlK6vKNnZm
+lHZ5E8HuoJV/JTf/QbN++8YYf6bp1Oi6bO/nqh+f5qYNNmbSlNb12Q1uV1v8+MlZ
+8ODNiYHFm4ce5nZGCj6VFmd/3Tf+/P7u4jEiNyfGGnv23s0ZHK9r6P38ekusd+up
+6Nr+7yumTy4o7960YTKpOukd//HIRFtGesruA9zOQvl7R/HKmQ+HR289O+8kTtgv
+zmRF4rXvL91Ji/Wpw5WTpPVY/ehArGgSd7QXPh1Kn7vq8uKLTy78Ag==
+=BLY3
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/schneidmaster
+
+==================================================================

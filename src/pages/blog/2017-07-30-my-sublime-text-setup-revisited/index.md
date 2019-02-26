@@ -10,7 +10,7 @@ draft: false
 category: development
 ---
 
-Three and a half years ago (wow, time flies) I wrote a [blog post](https://schneid.io/blog/my-sublime-text-setup.html) detailing my Sublime Text configuration. Over that time, I've tried out a handful of new offerings (Atom and VS Code among others) but I've never found an editor to match the speed, stability, and ultimately productivity of Sublime. I was recently going to link my old post to a coworker but realized it's now pretty hopelessly out of date, so I decided to write a new post about my Sublime Text setup. I hope it helps you get started on my favorite text editor.
+Three and a half years ago (wow, time flies) I wrote a [blog post](https://schneider.dev/blog/my-sublime-text-setup.html) detailing my Sublime Text configuration. Over that time, I've tried out a handful of new offerings (Atom and VS Code among others) but I've never found an editor to match the speed, stability, and ultimately productivity of Sublime. I was recently going to link my old post to a coworker but realized it's now pretty hopelessly out of date, so I decided to write a new post about my Sublime Text setup. I hope it helps you get started on my favorite text editor.
 
 ### Basics
 

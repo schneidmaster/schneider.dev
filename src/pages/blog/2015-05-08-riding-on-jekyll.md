@@ -9,7 +9,7 @@ draft: false
 category: development
 ---
 
-I recently refreshed my personal site/blog. I've been meaning to try out [Jekyll](http://jekyllrb.com), a static site/blog generator, and so I decided I might as well give it a try. This post is about getting a Jekyll blog/site running with Capistrano, a tagging system, and a generator for new posts. You can check out all of the code for my site [on Github](https://github.com/schneidmaster/schneid.io).
+I recently refreshed my personal site/blog. I've been meaning to try out [Jekyll](http://jekyllrb.com), a static site/blog generator, and so I decided I might as well give it a try. This post is about getting a Jekyll blog/site running with Capistrano, a tagging system, and a generator for new posts. You can check out all of the code for my site [on Github](https://github.com/schneidmaster/schneider.dev).
 
 First, you'll need to install Jekyll globally:
 
@@ -28,7 +28,7 @@ paginate_path: '/blog/page:num/'
 
 I also messed around with the navigation and created a page for my projects. Pages on Jekyll are created in `pagename/index.html` while the navigation, post footer, and other partials are located in `_includes`.
 
-Now for the interesting parts. I loosely followed [this guide](http://charliepark.org/tags-in-jekyll/) to add tags to my Jekyll blog. Following the tutorial's advice, I created `_plugins/tag_gen.rb` with [these contents](https://github.com/schneidmaster/schneid.io/blob/master/_plugins/_tag_gen.rb), and `_layouts/tag_index.html` with [these contents](https://github.com/schneidmaster/schneid.io/blob/master/_layouts/tag_index.html). I also had to add `tag_dir: '/blog/tag'` to `_config.yml` to match my `/blog/` subdirectory, and had to add the tags to the beginning of `_includes/post_footer.html` so they'd be printed after each post:
+Now for the interesting parts. I loosely followed [this guide](http://charliepark.org/tags-in-jekyll/) to add tags to my Jekyll blog. Following the tutorial's advice, I created `_plugins/tag_gen.rb` with [these contents](https://github.com/schneidmaster/schneider.dev/blob/master/_plugins/_tag_gen.rb), and `_layouts/tag_index.html` with [these contents](https://github.com/schneidmaster/schneider.dev/blob/master/_layouts/tag_index.html). I also had to add `tag_dir: '/blog/tag'` to `_config.yml` to match my `/blog/` subdirectory, and had to add the tags to the beginning of `_includes/post_footer.html` so they'd be printed after each post:
 
 ```html
 {% raw
@@ -76,11 +76,11 @@ require 'capistrano/deploy'
 
 ###### config/deploy.rb
 ```ruby
-set :application, 'schneid.io'
+set :application, 'schneider.dev'
 set :include_dir, '_site'
 set :scm, :copy
 
-set :deploy_to, '/srv/www/schneid.io'
+set :deploy_to, '/srv/www/schneider.dev'
 
 namespace :deploy do
   before :deploy, :update_jekyll do

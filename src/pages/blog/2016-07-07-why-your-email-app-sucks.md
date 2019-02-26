@@ -8,7 +8,7 @@ layout: post
 draft: false
 category: productivity
 ---
-2.5 years ago, I wrote a [post](https://schneid.io/blog/mail-pilot-or-the-state-of-email-on-the-mac.html) about the state of email apps for Mac that surprisingly got [a little popular](https://news.ycombinator.com/item?id=7100570) on Hacker News. At the time, I was bullish on Mail Pilot, but in the weeks and months following the post it grew buggier and less reliable and ultimately ended up with the others on the trash heap of email apps.
+2.5 years ago, I wrote a [post](https://schneider.dev/blog/mail-pilot-or-the-state-of-email-on-the-mac.html) about the state of email apps for Mac that surprisingly got [a little popular](https://news.ycombinator.com/item?id=7100570) on Hacker News. At the time, I was bullish on Mail Pilot, but in the weeks and months following the post it grew buggier and less reliable and ultimately ended up with the others on the trash heap of email apps.
 
 You would think that the state of email on the Mac would have improved in the 2.5 years since that post, but you would be wrong. Slack grew to a $4 billion company; Facebook grew from 1.25 billion to 1.75 billion users; a few hundred unicorns were born, grew up, and died; and email in the Apple ecosystem is just as underwhelming as it was two Januaries past.
 

@@ -3,7 +3,7 @@ const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   siteMetadata: {
-    url: 'https://schneid.io',
+    url: 'https://schneider.dev',
     title: 'Zach Schneider',
     subtitle: 'Rails, React, & Sundry',
     copyright: '© All rights reserved.',
@@ -20,7 +20,7 @@ module.exports = {
     ],
     author: {
       name: 'Zach Schneider',
-      email: 'zach@schneid.io',
+      email: 'zach@schneider.dev',
       twitter: 'schneidmaster',
       github: 'schneidmaster',
       linkedin: 'zachariahschneider',

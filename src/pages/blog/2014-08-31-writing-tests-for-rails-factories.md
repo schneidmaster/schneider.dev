@@ -10,9 +10,9 @@ draft: false
 category: development
 ---
 
-In the [last post](https://schneid.io/blog/writing-tests-for-rails-setup.html), I covered setting up the rspec test environment and writing your first basic feature test. In this post, I'll cover using factories to mock data and write a simple feature test using that mocked data. 
+In the [last post](https://schneider.dev/blog/writing-tests-for-rails-setup.html), I covered setting up the rspec test environment and writing your first basic feature test. In this post, I'll cover using factories to mock data and write a simple feature test using that mocked data. 
 
-First, you'll need to add a few gems to the test group of your `Gemfile`: DatabaseCleaner, FactoryGirl, and Faker. (I briefly covered what each of these gems does in the [first post](https://schneid.io/blog/writing-tests-for-rails-introduction.html) of the series, and you'll see more later in this tutorial.) The test group of your gemfile should look like this:
+First, you'll need to add a few gems to the test group of your `Gemfile`: DatabaseCleaner, FactoryGirl, and Faker. (I briefly covered what each of these gems does in the [first post](https://schneider.dev/blog/writing-tests-for-rails-introduction.html) of the series, and you'll see more later in this tutorial.) The test group of your gemfile should look like this:
 
 ```ruby
 group :test do
@@ -87,4 +87,4 @@ The `let!` block is evaluated by rspec before each test within the `describe` bl
 
 If you open up `coverage/index.html` now, you'll see that the ArticlesController now appears in the list of files. Unfortunately, it's only at 47.06% coverage so far, since we've only written a feature test for one of its methods (`#show`). If you click on the file in the coverage report list, SimpleCov will display the file and highlight the "hit" (tested) lines in green and the "missed" (untested) lines in red. Not to worry, though; we'll write more tests for the rest of ArticlesController later on.
 
-And that's it for this post. You can view the changes made during this tutorial on GitHub [here](https://github.com/schneidmaster/rspec-blog-example/commit/6fe141348d42f80d5769f8ef5a6d6d646129453f). In the [next article](https://schneid.io/blog/writing-tests-for-rails-features.html), I'll cover how to write more complicated feature tests (also incorporating mocked data) and use helper methods to enhance your rspec tests. 
+And that's it for this post. You can view the changes made during this tutorial on GitHub [here](https://github.com/schneidmaster/rspec-blog-example/commit/6fe141348d42f80d5769f8ef5a6d6d646129453f). In the [next article](https://schneider.dev/blog/writing-tests-for-rails-features.html), I'll cover how to write more complicated feature tests (also incorporating mocked data) and use helper methods to enhance your rspec tests. 

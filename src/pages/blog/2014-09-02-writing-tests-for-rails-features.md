@@ -10,7 +10,7 @@ draft: false
 category: development
 ---
 
-In the [last post](https://schneid.io/blog/writing-tests-for-rails-factories.html), I covered mocking data with FactoryGirl and writing a basic feature test using mocked data. In this article, I'll cover writing more complicated feature specs and incorporating helper methods to enhance your feature tests.
+In the [last post](https://schneider.dev/blog/writing-tests-for-rails-factories.html), I covered mocking data with FactoryGirl and writing a basic feature test using mocked data. In this article, I'll cover writing more complicated feature specs and incorporating helper methods to enhance your feature tests.
 
 As I mentioned at the end of the previous post, our first article feature test covered the `#show` method of the articles controller but left the controller at only 47.66% test coverage. For starters, we'll add feature specs to cover the other methods of the articles controller (listing, creating, editing, and deleting articles). For completeness, we'll need to test each function under multiple contexts- when no user is logged in, when the user that owns the article is logged in (for edit/update), and when a different user is logged in.
 
@@ -344,4 +344,4 @@ feature 'Auth' do
 end
 ```
     
-And that's it for this tutorial. Try your hand at writing feature specs for the rest of the articles controller, comments controller, and users controller, and check your code against my full suite [here](https://github.com/schneidmaster/rspec-blog-example/commit/b59f0eef5ded4db363029f70e39c906146cb3533). In the [next post](https://schneid.io/blog/writing-tests-for-rails-models.html), I'll cover writing model tests to specifically target complicated model methods.
+And that's it for this tutorial. Try your hand at writing feature specs for the rest of the articles controller, comments controller, and users controller, and check your code against my full suite [here](https://github.com/schneidmaster/rspec-blog-example/commit/b59f0eef5ded4db363029f70e39c906146cb3533). In the [next post](https://schneider.dev/blog/writing-tests-for-rails-models.html), I'll cover writing model tests to specifically target complicated model methods.

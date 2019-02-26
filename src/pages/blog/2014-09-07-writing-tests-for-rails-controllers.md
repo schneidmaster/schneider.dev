@@ -10,7 +10,7 @@ draft: false
 category: development
 ---
 
-In the [previous post](https://schneid.io/blog/writing-tests-for-rails-models.html), I discussed writing model tests to enhance the coverage of your test suite. In this final post, I'll cover one other specific kind of test: controller tests.
+In the [previous post](https://schneider.dev/blog/writing-tests-for-rails-models.html), I discussed writing model tests to enhance the coverage of your test suite. In this final post, I'll cover one other specific kind of test: controller tests.
 
 Controller tests are similar to model tests in that while model tests test one specific method of a model, controller tests test one specific method of a controller. A controller test simply sends a request to a controller method and expects the controller to render a specific result (a response code like 200 OK, a redirection, or perhaps some specific content). In general, I don't find controller tests to be all that useful, as their functionality is usually subsumed by feature tests. However, controller tests are indispensible for testing APIs.
 

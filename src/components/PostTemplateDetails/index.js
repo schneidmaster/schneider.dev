@@ -13,17 +13,13 @@ class PostTemplateDetails extends React.Component {
     const tags = post.fields.tagSlugs
     const readingTime = post.fields.readingTime.text
 
-    const homeBlock = (
-      <div>
-        <Link className="post-single__home-button" to="/">
-          All Posts
-        </Link>
-      </div>
-    )
-
     return (
       <div>
-        {homeBlock}
+        <div>
+          <Link className="post-single__home-button" to="/">
+            All posts
+          </Link>
+        </div>
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>

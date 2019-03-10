@@ -1,5 +1,5 @@
-const lost = require('lost')
-const pxtorem = require('postcss-pxtorem')
+const lost = require('lost');
+const pxtorem = require('postcss-pxtorem');
 
 module.exports = {
   siteMetadata: {
@@ -51,7 +51,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map(edge =>
+              allMarkdownRemark.edges.map((edge) =>
                 Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
@@ -116,9 +116,7 @@ module.exports = {
               },
               meta: {
                 color: 'white',
-                fields: [
-                  'date',
-                ],
+                fields: ['date'],
                 parts: [
                   'Zach Schneider | ',
                   {
@@ -178,12 +176,12 @@ module.exports = {
           }`,
         output: '/sitemap.xml',
         serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
+          allSitePage.edges.map((edge) => {
             return {
               url: site.siteMetadata.url + edge.node.path,
               changefreq: 'daily',
               priority: 0.7,
-            }
+            };
           }),
       },
     },
@@ -227,4 +225,4 @@ module.exports = {
       },
     },
   ],
-}
+};

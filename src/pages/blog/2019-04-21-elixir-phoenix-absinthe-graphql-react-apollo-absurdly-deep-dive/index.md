@@ -1,6 +1,6 @@
 ---
 title: "Elixir, Phoenix, Absinthe, GraphQL, React, and Apollo: an absurdly deep dive"
-date: 2019-04-20 16:00:00 Z
+date: 2019-04-21 16:00:00 Z
 tags:
   - elixir
   - phoenix

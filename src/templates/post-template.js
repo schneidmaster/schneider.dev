@@ -1,8 +1,8 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import PostTemplateDetails from '../components/PostTemplateDetails';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import PostTemplateDetails from "../components/PostTemplateDetails";
 
 class PostTemplate extends React.Component {
   render() {
@@ -21,23 +21,23 @@ class PostTemplate extends React.Component {
         <div>
           <Helmet>
             <title>{`${postTitle} - ${title}`}</title>
-            <meta name='description' content={description} />
-            <meta property='og:title' content={postTitle} />
-            <meta property='og:description' content={description} />
-            <meta property='og:url' content={url + post.fields.slug} />
-            <meta property='og:site_name' content={title} />
-            <meta property='og:type' content='article' />
+            <meta name="description" content={description} />
+            <meta property="og:title" content={postTitle} />
+            <meta property="og:description" content={description} />
+            <meta property="og:url" content={url + post.fields.slug} />
+            <meta property="og:site_name" content={title} />
+            <meta property="og:type" content="article" />
             <meta
-              property='og:image'
+              property="og:image"
               content={`${url}${post.fields.slug}twitter-card.jpg`}
             />
-            <meta property='og:image:alt' content={postTitle} />
-            <meta name='twitter:creator' content={`@${twitter}`} />
-            <meta name='twitter:card' content='summary_large_image' />
-            <meta name='twitter:title' content={postTitle} />
-            <meta name='twitter:description' content={description} />
+            <meta property="og:image:alt" content={postTitle} />
+            <meta name="twitter:creator" content={`@${twitter}`} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={postTitle} />
+            <meta name="twitter:description" content={description} />
             <meta
-              name='twitter:image'
+              name="twitter:image"
               content={`${url}${post.fields.slug}twitter-card.jpg`}
             />
           </Helmet>

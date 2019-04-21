@@ -1,8 +1,8 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import PageTemplateDetails from '../components/PageTemplateDetails';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import PageTemplateDetails from "../components/PageTemplateDetails";
 
 class PageTemplate extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class PageTemplate extends React.Component {
         <div>
           <Helmet>
             <title>{`${pageTitle} - ${title}`}</title>
-            <meta name='description' content={description} />
+            <meta name="description" content={description} />
           </Helmet>
           <PageTemplateDetails {...this.props} />
         </div>

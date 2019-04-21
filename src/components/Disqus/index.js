@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDisqusComments from 'react-disqus-comments';
+import React from "react";
+import ReactDisqusComments from "react-disqus-comments";
 
 const Disqus = ({ postNode, siteMetadata }) => {
   const post = postNode.frontmatter;
@@ -7,7 +7,7 @@ const Disqus = ({ postNode, siteMetadata }) => {
   return (
     <ReactDisqusComments
       shortname={siteMetadata.disqusShortname}
-      identifier={postNode.fields.slug.replace(/\/$/, '')}
+      identifier={postNode.fields.slug.replace(/\/$/, "")}
       title={post.title}
       url={url}
     />

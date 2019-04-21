@@ -1,9 +1,9 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
-import Post from '../components/Post';
-import Sidebar from '../components/Sidebar';
+import React from "react";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Post from "../components/Post";
+import Sidebar from "../components/Sidebar";
 
 class IndexRoute extends React.Component {
   render() {
@@ -19,27 +19,27 @@ class IndexRoute extends React.Component {
         <div>
           <Helmet>
             <title>{title}</title>
-            <meta name='description' content={subtitle} />
-            <meta property='og:title' content={title} />
-            <meta property='og:description' content={subtitle} />
-            <meta property='og:url' content={url} />
-            <meta property='og:site_name' content={title} />
-            <meta property='og:type' content='website' />
+            <meta name="description" content={subtitle} />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={subtitle} />
+            <meta property="og:url" content={url} />
+            <meta property="og:site_name" content={title} />
+            <meta property="og:type" content="website" />
           </Helmet>
           <Sidebar {...this.props} />
-          <div className='content'>
-            <div className='content__inner'>
+          <div className="content">
+            <div className="content__inner">
               {items}
 
-              <div className='content__links'>
+              <div className="content__links">
                 {index > 1 && (
-                  <Link to={`/${index === 2 ? '' : index - 1}`} rel='prev'>
+                  <Link to={`/${index === 2 ? "" : index - 1}`} rel="prev">
                     ← Previous page
                   </Link>
                 )}
 
                 {index < pageCount && (
-                  <Link to={`/${index + 1}`} rel='next'>
+                  <Link to={`/${index + 1}`} rel="next">
                     Next page →
                   </Link>
                 )}

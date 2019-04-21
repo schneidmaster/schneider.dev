@@ -1,19 +1,19 @@
-const _ = require('lodash');
-const Promise = require('bluebird');
-const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
-const createPaginatedPages = require('gatsby-paginate');
-const slash = require('slash');
+const _ = require("lodash");
+const Promise = require("bluebird");
+const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
+const createPaginatedPages = require("gatsby-paginate");
+const slash = require("slash");
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('./src/templates/post-template.js');
-    const pageTemplate = path.resolve('./src/templates/page-template.js');
-    const tagTemplate = path.resolve('./src/templates/tag-template.js');
+    const postTemplate = path.resolve("./src/templates/post-template.js");
+    const pageTemplate = path.resolve("./src/templates/page-template.js");
+    const tagTemplate = path.resolve("./src/templates/tag-template.js");
     const categoryTemplate = path.resolve(
-      './src/templates/category-template.js'
+      "./src/templates/category-template.js",
     );
 
     graphql(`
@@ -52,16 +52,16 @@ exports.createPages = ({ graphql, actions }) => {
 
       const results = result.data.allMarkdownRemark.edges;
       const pages = results.filter(
-        (page) => page.node.frontmatter.layout === 'page'
+        (page) => page.node.frontmatter.layout === "page",
       );
       const posts = results.filter(
-        (post) => post.node.frontmatter.layout === 'post'
+        (post) => post.node.frontmatter.layout === "post",
       );
 
       // Create the paginated post indexes.
       createPaginatedPages({
         edges: posts,
-        pageTemplate: 'src/templates/home-template.js',
+        pageTemplate: "src/templates/home-template.js",
         createPage,
       });
 
@@ -83,7 +83,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         let tags = [];
-        if (_.get(post, 'node.frontmatter.tags')) {
+        if (_.get(post, "node.frontmatter.tags")) {
           tags = tags.concat(post.node.frontmatter.tags);
         }
 
@@ -98,7 +98,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         let categories = [];
-        if (_.get(post, 'node.frontmatter.category')) {
+        if (_.get(post, "node.frontmatter.category")) {
           categories = categories.concat(post.node.frontmatter.category);
         }
 
@@ -121,30 +121,30 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'File') {
+  if (node.internal.type === "File") {
     const parsedFilePath = path.parse(node.absolutePath);
-    const slug = `/${parsedFilePath.dir.split('---')[1]}/`;
-    createNodeField({ node, name: 'slug', value: slug });
-  } else if (node.internal.type === 'MarkdownRemark') {
+    const slug = `/${parsedFilePath.dir.split("---")[1]}/`;
+    createNodeField({ node, name: "slug", value: slug });
+  } else if (node.internal.type === "MarkdownRemark") {
     const value = createFilePath({ node, getNode });
     createNodeField({
       node,
-      name: 'slug',
-      value: value.replace(/pages\//, '').replace(/\d\d\d\d-\d\d-\d\d-/, ''),
+      name: "slug",
+      value: value.replace(/pages\//, "").replace(/\d\d\d\d-\d\d-\d\d-/, ""),
     });
 
     if (node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map(
-        (tag) => `/tags/${_.kebabCase(tag)}/`
+        (tag) => `/tags/${_.kebabCase(tag)}/`,
       );
-      createNodeField({ node, name: 'tagSlugs', value: tagSlugs });
+      createNodeField({ node, name: "tagSlugs", value: tagSlugs });
     }
 
-    if (typeof node.frontmatter.category !== 'undefined') {
+    if (typeof node.frontmatter.category !== "undefined") {
       const categorySlug = `/categories/${_.kebabCase(
-        node.frontmatter.category
+        node.frontmatter.category,
       )}/`;
-      createNodeField({ node, name: 'categorySlug', value: categorySlug });
+      createNodeField({ node, name: "categorySlug", value: categorySlug });
     }
   }
 };

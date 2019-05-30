@@ -46,7 +46,8 @@ class Sidebar extends React.Component {
         <p className="sidebar__author-subtitle">
           {subtitle}
           <br />
-          Engineering lead at <a href="https://www.aha.io">Aha!</a>
+          Director, Software Engineering at{" "}
+          <a href="https://www.aha.io">Aha!</a>
         </p>
       </div>
     );

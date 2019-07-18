@@ -42,7 +42,7 @@ The data source exposes two methods, `data` and `query`. `data` provides Dataloa
 
 I then had to update my `*_types.ex` schema files to use Dataloader to resolve associations. Here's a simple example for the user object:
 
-```
+```elixir
 # lib/socializer_web/schema/user_types.ex
 defmodule SocializerWeb.Schema.UserTypes do
   use Absinthe.Schema.Notation

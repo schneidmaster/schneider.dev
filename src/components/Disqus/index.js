@@ -3,7 +3,7 @@ import ReactDisqusComments from "react-disqus-comments";
 
 const Disqus = ({ postNode, siteMetadata }) => {
   const post = postNode.frontmatter;
-  const url = siteMetadata.url + postNode.fields.slug;
+  const url = siteMetadata.siteUrl + postNode.fields.slug;
   return (
     <ReactDisqusComments
       shortname={siteMetadata.disqusShortname}

@@ -9,7 +9,7 @@ class PostTemplate extends React.Component {
     const {
       title,
       subtitle,
-      url,
+      siteUrl,
       author: { twitter },
     } = this.props.data.site.siteMetadata;
     const post = this.props.data.markdownRemark;
@@ -24,12 +24,12 @@ class PostTemplate extends React.Component {
             <meta name="description" content={description} />
             <meta property="og:title" content={postTitle} />
             <meta property="og:description" content={description} />
-            <meta property="og:url" content={url + post.fields.slug} />
+            <meta property="og:url" content={siteUrl + post.fields.slug} />
             <meta property="og:site_name" content={title} />
             <meta property="og:type" content="article" />
             <meta
               property="og:image"
-              content={`${url}${post.fields.slug}twitter-card.jpg`}
+              content={`${siteUrl}${post.fields.slug}twitter-card.jpg`}
             />
             <meta property="og:image:alt" content={postTitle} />
             <meta name="twitter:creator" content={`@${twitter}`} />
@@ -38,7 +38,7 @@ class PostTemplate extends React.Component {
             <meta name="twitter:description" content={description} />
             <meta
               name="twitter:image"
-              content={`${url}${post.fields.slug}twitter-card.jpg`}
+              content={`${siteUrl}${post.fields.slug}twitter-card.jpg`}
             />
           </Helmet>
           <PostTemplateDetails {...this.props} />
@@ -56,7 +56,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         subtitle
-        url
+        siteUrl
         copyright
         author {
           name
@@ -66,7 +66,6 @@ export const pageQuery = graphql`
           linkedin
         }
         disqusShortname
-        url
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

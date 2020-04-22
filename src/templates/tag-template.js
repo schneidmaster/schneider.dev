@@ -31,7 +31,7 @@ export const pageQuery = graphql`
         title
         subtitle
         copyright
-        url
+        siteUrl
         menu {
           label
           path

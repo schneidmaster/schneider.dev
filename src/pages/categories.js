@@ -52,13 +52,13 @@ class CategoriesRoute extends React.Component {
 export default CategoriesRoute;
 
 export const pageQuery = graphql`
-  query CategoryesQuery {
+  query CategoriesQuery {
     site {
       siteMetadata {
         title
         subtitle
         copyright
-        url
+        siteUrl
         menu {
           label
           path

@@ -8,7 +8,7 @@ import "./style.scss";
 
 class PostTemplateDetails extends React.Component {
   render() {
-    const { author, subtitle, url } = this.props.data.site.siteMetadata;
+    const { author, subtitle, siteUrl } = this.props.data.site.siteMetadata;
     const post = this.props.data.markdownRemark;
     const tags = post.fields.tagSlugs;
     const readingTime = post.fields.readingTime.text;
@@ -61,7 +61,7 @@ class PostTemplateDetails extends React.Component {
                 <div className="post-single__footer-bio-desc">
                   <h4>Zach Schneider</h4>
                   {subtitle}
-                  <Links siteUrl={url} data={author} />
+                  <Links siteUrl={siteUrl} data={author} />
                 </div>
               </div>
             </div>

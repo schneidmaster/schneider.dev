@@ -14,7 +14,7 @@ class Sidebar extends React.Component {
       subtitle,
       copyright,
       menu,
-      url,
+      siteUrl,
     } = this.props.data.site.siteMetadata;
     const isHomePage = get(location, "pathname", "/") === "/";
 
@@ -59,7 +59,7 @@ class Sidebar extends React.Component {
           <div className="sidebar__author">{authorBlock}</div>
           <div>
             <Menu data={menu} />
-            <Links siteUrl={url} data={author} />
+            <Links siteUrl={siteUrl} data={author} />
             <p className="sidebar__copyright">{copyright}</p>
           </div>
         </div>

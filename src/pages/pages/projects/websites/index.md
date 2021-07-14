@@ -95,8 +95,8 @@ layout: page
 
 ## Cedarville Out
 
-**Technologies**: Jekyll
+**Technologies**: React, Gatsby
 
 [![Cedarville Out](cedarvilleout.png)](https://cedarvilleout.org)
 
-[Website](https://cedarvilleout.org) for Cedarville Out, an organization of lesbian, gay, bisexual, trans\*, queer (LGBTQ) and other sex- and gender-nonconforming students and alumni of Cedarville University. Built with Jekyll atop the [Drava](http://themeforest.net/item/drava-multipurpose-theme-powered-by-jekyll/11383647) theme.
+[Website](https://cedarvilleout.org) for Cedarville Out, an organization of lesbian, gay, bisexual, trans\*, queer (LGBTQ) and other sex- and gender-nonconforming students and alumni of Cedarville University. Built with Gatsby using styles from the [Drava](http://themeforest.net/item/drava-multipurpose-theme-powered-by-jekyll/11383647) theme.
